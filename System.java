@@ -8,21 +8,22 @@ class Main{
 abstract class LibraryItem{
     private int itemId;
     private String title;
-    private boolean isAvailable;
+    private boolean isAvailable = true;
     
-    LibraryItems(int i, String t, boolean a){
+    LibraryItems(int i, String t){
         this.itemId = i;
         this.title = t;
-        this.isAvailable = a;
     }
     
-    boolean borrowItem(){
-        if(this.isAvailable) return false;
+    void borrowItem(){
+        if(this.isAvailable){
+            isAvailable = false;
+        }
         
-        return true;
+        isAvailable = true;
     }
     
-    boolean returnItem(){
+    void returnItem(){
         if(!isAvailable){
             isAvailable = true;
             System.out.println(title+" was returned successfully");
@@ -43,8 +44,8 @@ abstract class LibraryItem{
 class Book extends LibraryItem{
     String author;
     double fine = 0.20;
-    Book(String id, String t, boolean a, String au){
-        super(id,t,a);
+    Book(String id, String t, String au){
+        super(id,t);
         this.author = au;
     }
     
@@ -63,8 +64,8 @@ class Book extends LibraryItem{
 class Magazine extends LibraryItem{
     double fine = 0.10;
     int issueNumber;
-    Book(String id, String t, boolean a, int i){
-        super(id,t,a);
+    Book(String id, String t, int i){
+        super(id,t);
         this.issueNumber = i;
     }
     
@@ -78,4 +79,33 @@ class Magazine extends LibraryItem{
     int CalculateFine(int days){
         return fine*days;
     }
+}
+
+class DVD extends LibraryItem{
+    double fine = 0.50;
+    int duration;
+    Book(String id, String t, int d){
+        super(id,t,a);
+        this.duration = d;
+    }
+    
+    @Override
+    void displayInfo(){
+        super.displayInfo();
+        System.out.println("Issue Number: "+ issueNumber);
+    }
+    
+    @Override
+    int CalculateFine(int days){
+        return fine*days;
+    }
+}
+
+interface Searchable{
+    String title;
+    boolean seachByTitle(String title);
+}
+
+class Library implements Searchable{
+    
 }
