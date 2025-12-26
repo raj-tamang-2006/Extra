@@ -19,23 +19,38 @@ class Main{
                 case 1:
                     Drinks d = new Drinks();
                     d.listOfItems();
-                    System.out.print("Choose (1-6)");
+                    System.out.print("Choose (1-6): ");
                     int drink = sc.nextInt();
-                    totalamt += d.price[drink - 1];
+                    if(drink < 1 || drink > 6){
+                        System.out.println("Invalid Order! Try again");
+                    } 
+                    else{
+                        totalamt += d.price[drink - 1];
+                    }
                     break;
                 case 2:
                     Food f = new Food();
                     f.listOfItems();
-                    System.out.print("Choose (1-6)");
+                    System.out.print("Choose (1-6): ");
                     int food = sc.nextInt();
-                    totalamt += f.price[food - 1];
+                    if(food < 1 || food > 6){
+                        System.out.println("Invalid Order! Try again");
+                    } 
+                    else{
+                        totalamt += f.price[food - 1];
+                    }
                     break;
                 case 3:
                     Dessert D = new Dessert();
                     D.listOfItems();
-                    System.out.print("Choose (1-6)");
+                    System.out.print("Choose (1-6): ");
                     int dessert = sc.nextInt();
-                    totalamt += D.price[dessert - 1];
+                    if(dessert < 1 || dessert > 6){
+                        System.out.println("Invalid Order! Try again");
+                    } 
+                    else{
+                        totalamt += D.price[dessert - 1];
+                    }
                     break;
                 case 4:
                     if(totalamt > 0){
