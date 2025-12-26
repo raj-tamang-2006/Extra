@@ -170,3 +170,236 @@ class Library implements Searchable {
         }
     }
 }
+
+/*
+
+Ouptut
+
+
+Welcome to KL Library
+---------------------
+----------------
+How may I help you?
+1. List all the items we have.
+2. Search for something
+3. Borrow something
+4. Return something
+5. Exit
+Choose(1-5): 1
+ID: 1
+Title: To Kill a Mockingbird
+Available: true
+Author: Harper Lee
+-----------
+ID: 2
+Title: 1984
+Available: true
+Author: George Orwell
+-----------
+ID: 3
+Title: Pride and Prejudice
+Available: true
+Author: Jane Austen
+-----------
+ID: 4
+Title: The Great Gatsby
+Available: true
+Author: F. Scott Fitzgerald
+-----------
+ID: 5
+Title: Moby-Dick
+Available: true
+Author: Herman Melville
+-----------
+ID: 6
+Title: The Catcher in the Rye
+Available: true
+Author: J.D. Salinger
+-----------
+ID: 7
+Title: The Hobbit
+Available: true
+Author: J.R.R. Tolkien
+-----------
+ID: 8
+Title: Fahrenheit 451
+Available: true
+Author: Ray Bradbury
+-----------
+ID: 9
+Title: Brave New World
+Available: true
+Author: Aldous Huxley
+-----------
+ID: 10
+Title: The Lord of the Rings
+Available: true
+Author: J.R.R. Tolkien
+-----------
+ID: 11
+Title: National Geographic
+Available: true
+Issue Number: 101
+-----------
+ID: 12
+Title: Forbes
+Available: true
+Issue Number: 202
+-----------
+ID: 13
+Title: The Economist
+Available: true
+Issue Number: 303
+-----------
+ID: 14
+Title: Scientific American
+Available: true
+Issue Number: 404
+-----------
+ID: 15
+Title: Popular Science
+Available: true
+Issue Number: 505
+-----------
+ID: 16
+Title: Wired
+Available: true
+Issue Number: 606
+-----------
+ID: 17
+Title: Reader's Digest
+Available: true
+Issue Number: 707
+-----------
+ID: 18
+Title: New Scientist
+Available: true
+Issue Number: 808
+-----------
+ID: 19
+Title: Rolling Stone
+Available: true
+Issue Number: 909
+-----------
+ID: 20
+Title: Sports Illustrated
+Available: true
+Issue Number: 1001
+-----------
+ID: 21
+Title: Avatar
+Available: true
+Duration: 162 minutes
+-----------
+ID: 22
+Title: The Avengers
+Available: true
+Duration: 143 minutes
+-----------
+ID: 23
+Title: Star Wars: A New Hope
+Available: true
+Duration: 121 minutes
+-----------
+ID: 24
+Title: The Lion King
+Available: true
+Duration: 88 minutes
+-----------
+ID: 25
+Title: Back to the Future
+Available: true
+Duration: 116 minutes
+-----------
+ID: 26
+Title: Jurassic World
+Available: true
+Duration: 124 minutes
+-----------
+ID: 27
+Title: Spider-Man: No Way Home
+Available: true
+Duration: 148 minutes
+-----------
+ID: 28
+Title: Harry Potter and the Sorcerer's Stone
+Available: true
+Duration: 152 minutes
+-----------
+ID: 29
+Title: Pirates of the Caribbean
+Available: true
+Duration: 143 minutes
+-----------
+ID: 30
+Title: Toy Story
+Available: true
+Duration: 81 minutes
+-----------
+----------------
+How may I help you?
+1. List all the items we have.
+2. Search for something
+3. Borrow something
+4. Return something
+5. Exit
+Choose(1-5): 2
+Enter title to search: Java
+Item not found
+----------------
+How may I help you?
+1. List all the items we have.
+2. Search for something
+3. Borrow something
+4. Return something
+5. Exit
+Choose(1-5): 2
+Enter title to search: Avatar
+ID: 21
+Title: Avatar
+Available: true
+Duration: 162 minutes
+----------------
+How may I help you?
+1. List all the items we have.
+2. Search for something
+3. Borrow something
+4. Return something
+5. Exit
+Choose(1-5): 3
+Enter item ID to borrow: 21
+Avatar borrowed successfully
+----------------
+How may I help you?
+1. List all the items we have.
+2. Search for something
+3. Borrow something
+4. Return something
+5. Exit
+Choose(1-5): 2
+Enter title to search: Avatar
+ID: 21
+Title: Avatar
+Available: false
+Duration: 162 minutes
+----------------
+How may I help you?
+1. List all the items we have.
+2. Search for something
+3. Borrow something
+4. Return something
+5. Exit
+Choose(1-5): 4
+Enter item ID to return: 21
+Avatar returned successfully
+----------------
+How may I help you?
+1. List all the items we have.
+2. Search for something
+3. Borrow something
+4. Return something
+5. Exit
+Choose(1-5): 5
+Thank you for using KL Library!
+
+*/
