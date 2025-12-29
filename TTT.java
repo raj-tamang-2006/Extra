@@ -1,4 +1,34 @@
 import java.util.*;
+public class TTT {
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		TicTacToe game = new TicTacToe();
+		System.out.print("Enter the first player's Name: ");
+		String P1 = sc.nextLine();
+		System.out.print("Enter the Second player's Name: ");
+		String P2 = sc.nextLine();
+		HumanPlayer p1 = new HumanPlayer(P1,'X',game);
+		HumanPlayer p2 = new HumanPlayer(P2, 'O',game);
+		
+		HumanPlayer cp;
+		cp = p1;
+		while (true) {
+           game.displayBoard();
+           cp.makeMove();
+           if (game.checkWin()) {
+               game.displayBoard();
+               System.out.println(cp.name + " wins!");
+               break;
+           }
+           if (game.isBoardFull()) {
+               game.displayBoard();
+               System.out.println("It's a draw!");
+               break;
+           }
+           cp = (cp == p1) ? p2 : p1;
+       }
+	}
+}
 public class HumanPlayer {
 	String name;
 	char mark;
@@ -31,31 +61,7 @@ public class HumanPlayer {
 		return true;
 	}
 }
-public class TTT {
-	public static void main(String[] args) {
-		TicTacToe game = new TicTacToe();
-		HumanPlayer p1 = new HumanPlayer("Raj",'X',game);
-		HumanPlayer p2 = new HumanPlayer("Sagar", 'O',game);
-		
-		HumanPlayer cp;
-		cp = p1;
-		while (true) {
-           game.displayBoard();
-           cp.makeMove();
-           if (game.checkWin()) {
-               game.displayBoard();
-               System.out.println(cp.name + " wins!");
-               break;
-           }
-           if (game.isBoardFull()) {
-               game.displayBoard();
-               System.out.println("It's a draw!");
-               break;
-           }
-           cp = (cp == p1) ? p2 : p1;
-       }
-	}
-}
+
 public class TicTacToe {
 	char[][] board;
 	public TicTacToe() {
